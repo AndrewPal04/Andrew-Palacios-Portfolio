@@ -2,16 +2,20 @@
 
 Accepted LeetCode submissions, organized by problem and language and kept up to date by LeetRepo.
 
-**1 solved** · 1 easy · 0 medium · 0 hard · 1 languages
+**2 solved** · 2 easy · 0 medium · 0 hard · 2 languages
 
 ## Topic coverage
 
+- Array: 1
 - Math: 1
+- String: 1
+- Trie: 1
 
 ## Recent solutions
 
 | # | Problem | Difficulty | Language |
 | -: | --- | --- | --- |
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/submissions/2122559416/) | Easy | C++ |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/submissions/2122520138/) | Easy | Python3 |
 
 ---
