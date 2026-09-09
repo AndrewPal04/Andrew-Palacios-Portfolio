@@ -2,19 +2,22 @@
 
 Accepted LeetCode submissions, organized by problem and language and kept up to date by LeetRepo.
 
-**2 solved** · 2 easy · 0 medium · 0 hard · 2 languages
+**3 solved** · 3 easy · 0 medium · 0 hard · 2 languages
 
 ## Topic coverage
 
+- String: 2
 - Array: 1
+- Bracket Sequences: 1
 - Math: 1
-- String: 1
+- Stack: 1
 - Trie: 1
 
 ## Recent solutions
 
 | # | Problem | Difficulty | Language |
 | -: | --- | --- | --- |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/submissions/2136881883/) | Easy | Python3 |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/submissions/2122559416/) | Easy | C++ |
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/submissions/2122520138/) | Easy | Python3 |
 
