@@ -160,6 +160,12 @@ export const otherWork = [
     href: "/projects/uav-search-and-rescue",
   },
   {
+    name: "Club Z Tutor Portal",
+    description:
+      "Node and Express app that fills monthly timesheet and attendance PDFs from short web forms, with bcrypt auth and integration tests.",
+    href: "https://github.com/AndrewPal04/Club-Z-Website-Portfolio",
+  },
+  {
     name: "LeetRepo",
     description:
       "Contributed study features to this LeetCode tool, like Today's Plan and written recall capture, plus tests.",
