@@ -3,44 +3,101 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  --background: #fbfaf7;
+  --bg: #f4f5f7;
   --surface: #ffffff;
-  --chip: #f1efe9;
-  --foreground: #1c1d1b;
-  --muted: #5f625d;
-  --border: #e2dfd7;
-  --accent: #0f6b62;
+  --inset: #f4f5f7;
+  --pill: #eef0f4;
+  --ink: #14161b;
+  --ink-2: #454953;
+  --ink-3: #5d6270;
+  --line: #d6d9e0;
+  --accent: oklch(0.5 0.2 262);
+  --accent-hover: oklch(0.44 0.2 262);
+  --accent-fill: oklch(0.5 0.2 262);
+  --accent-tint: oklch(0.93 0.04 262);
+  --accent-light: oklch(0.78 0.12 262);
   --on-accent: #ffffff;
+  --status: oklch(0.68 0.17 150);
+  --night: #14161b;
+  --night-line: #2c2f38;
+  --night-chip: #252830;
+  --night-chip-ink: #d4d7de;
+  --night-muted: #a3a8b4;
+  --shadow-shot: 0 10px 30px rgb(20 22 27 / 0.12);
 }
 
+/* Not part of the handoff: derived from the light palette so the toggle keeps working. */
 :root[data-theme="dark"] {
-  --background: #121311;
-  --surface: #191b18;
-  --chip: #242622;
-  --foreground: #ecebe6;
-  --muted: #a3a29b;
-  --border: #2f312d;
-  --accent: #5fd0c0;
-  --on-accent: #0d1f1c;
+  --bg: #0d0e11;
+  --surface: #17191e;
+  --inset: #1f2228;
+  --pill: #252830;
+  --ink: #eceef2;
+  --ink-2: #b3b7c1;
+  --ink-3: #8f94a1;
+  --line: #343843;
+  --accent: oklch(0.74 0.13 262);
+  --accent-hover: oklch(0.8 0.11 262);
+  --accent-fill: oklch(0.47 0.19 262);
+  --accent-tint: oklch(0.3 0.07 262);
+  --accent-light: oklch(0.78 0.12 262);
+  --on-accent: #ffffff;
+  --status: oklch(0.72 0.17 150);
+  --night: #23262e;
+  --night-line: #363a45;
+  --night-chip: #2f333c;
+  --night-chip-ink: #d4d7de;
+  --night-muted: #a3a8b4;
+  --shadow-shot: 0 10px 30px rgb(0 0 0 / 0.45);
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-bg: var(--bg);
   --color-surface: var(--surface);
-  --color-chip: var(--chip);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
+  --color-inset: var(--inset);
+  --color-pill: var(--pill);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fill: var(--accent-fill);
+  --color-accent-tint: var(--accent-tint);
+  --color-accent-light: var(--accent-light);
   --color-on-accent: var(--on-accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-source-serif);
+  --color-status: var(--status);
+  --color-night: var(--night);
+  --color-night-line: var(--night-line);
+  --color-night-chip: var(--night-chip);
+  --color-night-chip-ink: var(--night-chip-ink);
+  --color-night-muted: var(--night-muted);
+  --shadow-shot: var(--shadow-shot);
+  --font-sans: var(--font-bricolage);
+  --font-mono: var(--font-dm-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 6rem;
+}
+
+@layer base {
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-bricolage), system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  a,
+  button {
+    transition:
+      color 0.18s ease,
+      background-color 0.18s ease,
+      border-color 0.18s ease;
+  }
 }
 
 [data-reveal] {
@@ -72,12 +129,6 @@ html {
   .theme-transition * {
     transition: none !important;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 :focus-visible {

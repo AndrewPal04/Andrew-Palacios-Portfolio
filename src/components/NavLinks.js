@@ -76,14 +76,14 @@ export default function NavLinks({ resumeHref }) {
 
   return (
     <>
-      <ul className="hidden items-center gap-5 font-mono text-xs uppercase tracking-wider md:flex">
+      <ul className="hidden items-center gap-1 text-[15px] md:flex">
         {sections.map(({ id, label }) => (
           <li key={id}>
             <Link
               href={`/#${id}`}
               aria-current={active === id ? "true" : undefined}
-              className={`transition-colors hover:text-accent ${
-                active === id ? "text-accent" : "text-muted"
+              className={`block rounded-full px-3.5 py-2 hover:bg-pill hover:text-ink ${
+                active === id ? "bg-pill" : ""
               }`}
             >
               {label}
@@ -91,8 +91,11 @@ export default function NavLinks({ resumeHref }) {
           </li>
         ))}
         {resumeHref && (
-          <li>
-            <a href={resumeHref} className="text-accent hover:underline">
+          <li className="ml-1">
+            <a
+              href={resumeHref}
+              className="block rounded-full bg-night px-4 py-2 text-white hover:bg-accent-fill hover:text-white"
+            >
               Resume
             </a>
           </li>
@@ -105,7 +108,7 @@ export default function NavLinks({ resumeHref }) {
         aria-expanded={open}
         aria-controls="phone-menu"
         aria-label={open ? "Close menu" : "Open menu"}
-        className="flex size-8 items-center justify-center border border-border text-muted hover:border-accent hover:text-accent md:hidden"
+        className="flex size-10 items-center justify-center rounded-full text-ink-2 hover:bg-pill hover:text-ink md:hidden"
       >
         <svg
           viewBox="0 0 24 24"
@@ -123,22 +126,25 @@ export default function NavLinks({ resumeHref }) {
       {open && (
         <ul
           id="phone-menu"
-          className="absolute inset-x-0 top-full border-b border-border bg-background px-4 py-2 font-mono text-sm uppercase tracking-wider md:hidden"
+          className="absolute inset-x-0 top-full mt-2 grid grid-cols-2 gap-1 rounded-[28px] bg-surface p-3 text-base shadow-[0_10px_30px_rgb(20_22_27/0.12)] md:hidden"
         >
           {menuSections.map(({ id, label }) => (
             <li key={id}>
               <Link
                 href={`/#${id}`}
                 onClick={() => setOpen(false)}
-                className="block py-2.5 text-muted hover:text-accent"
+                className="block rounded-full px-4 py-2.5 hover:bg-pill hover:text-ink"
               >
                 {label}
               </Link>
             </li>
           ))}
           {resumeHref && (
-            <li>
-              <a href={resumeHref} className="block py-2.5 text-accent">
+            <li className="col-span-2 mt-1">
+              <a
+                href={resumeHref}
+                className="block rounded-full bg-night px-4 py-2.5 text-center text-white hover:bg-accent-fill hover:text-white"
+              >
                 Resume
               </a>
             </li>

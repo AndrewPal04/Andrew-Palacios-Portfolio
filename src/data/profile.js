@@ -3,6 +3,10 @@ export const profile = {
   initials: "AP",
   title: "Software Engineer",
   tagline: "I build full-stack web and mobile apps.",
+  heroIntro:
+    "Full-stack software engineer and recent Cal Poly Pomona Computer Science graduate. As Lead Software Engineer at Apulza, I build web, mobile, and AI features for a study app designed for neurodivergent students.",
+  contactBlurb:
+    "I'm looking for new grad software engineering roles and I'm open to relocating. Email is the best way to reach me.",
   email: "andrewpalacios2004@gmail.com",
   github: "https://github.com/AndrewPal04",
   linkedin: "https://www.linkedin.com/in/andrew-palacios-55ba29307",

@@ -19,14 +19,14 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle dark mode"
-      className="flex size-8 items-center justify-center border border-border text-muted hover:border-accent hover:text-accent"
+      className="flex size-10 items-center justify-center rounded-full text-ink-2 hover:bg-pill hover:text-ink"
     >
-      <svg viewBox="0 0 24 24" className="size-4 dark:hidden" fill="currentColor" aria-hidden>
+      <svg viewBox="0 0 24 24" className="size-[18px] dark:hidden" fill="currentColor" aria-hidden>
         <path d="M21 14.5A9 9 0 0 1 9.5 3a9 9 0 1 0 11.5 11.5Z" />
       </svg>
       <svg
         viewBox="0 0 24 24"
-        className="hidden size-4 dark:block"
+        className="hidden size-[18px] dark:block"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
